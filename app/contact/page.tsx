@@ -169,7 +169,7 @@ export default function ContactPage() {
                                     <input type="checkbox" className="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500" />
                                 </div>
                                 <p className="text-xs text-slate-500 leading-relaxed">
-                                    Stay connected! By submitting this form, you agree to receive marketing text messages (such as promotions and cart reminders) from ZFUSION LLC MEDICAL at the number provided. Consent is not required for purchase. Message and data rates may apply, and frequency may vary. You can opt out anytime by replying STOP. For assistance, reply HELP. Read our <a href="/privacy-policy" className="text-blue-600 font-bold hover:underline">Privacy Policy</a> and <a href="/terms" className="text-blue-600 font-bold hover:underline">Terms</a> for more details.
+                                    Stay connected! By submitting this form, you agree to receive marketing text messages (such as promotions and cart reminders) from ZFUSION LLC at the number provided. Consent is not required for purchase. Message and data rates may apply, and frequency may vary. You can opt out anytime by replying STOP. For assistance, reply HELP. Read our <a href="/privacy-policy" className="text-blue-600 font-bold hover:underline">Privacy Policy</a> and <a href="/terms" className="text-blue-600 font-bold hover:underline">Terms</a> for more details.
                                 </p>
                             </div>
 
@@ -216,8 +216,9 @@ export default function ContactPage() {
                                     {
                                       icon: MapPin,
                                       title: "Our Location",
-                                      val: "Altamash Mohammad Ismail S, Sole MBR",
-                                      sub: "30 N Gould St 39479, Sheridan, WY 82801",
+                                    //   val: "Altamash Mohammad Ismail S, Sole MBR",
+                                      val: "30 N Gould St 39479, Sheridan, WY 82801",
+                                        sub: "Visit us or send mail"
                                     },
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-5 group">

@@ -15,7 +15,7 @@ export default function DeliverySection() {
                     <div className="flex-1 relative z-10">
                         <h2 className="text-3xl md:text-4xl font-bold mb-6">Fast, Reliable Nationwide Delivery</h2>
                         <p className="text-blue-100 text-lg leading-relaxed max-w-xl">
-                            No matter where you are in the U.S., ZFUSION LLC MEDICAL SUPPLIES delivers right to your home or healthcare facility. We partner with top logistics providers to ensure on-time delivery, safe packaging, and tracking updates.
+                            No matter where you are in the U.S., ZFUSION LLC  delivers right to your home or healthcare facility. We partner with top logistics providers to ensure on-time delivery, safe packaging, and tracking updates.
                         </p>
                     </div>
                     <div className="bg-white/10 p-6 rounded-full backdrop-blur-md border border-white/20 relative z-10 animate-float">

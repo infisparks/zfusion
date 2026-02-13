@@ -41,7 +41,7 @@ export default function TermsOfService() {
                     <h2 className="text-3xl font-bold text-slate-900 mb-6">Agreement</h2>
                     
                     <p className="mb-6 font-medium text-lg text-slate-800">
-                        Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the website (the "Service") operated by ZFUSION LLC MEDICAL ("us", "we", or "our").
+                        Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the website (the "Service") operated by ZFUSION LLC  ("us", "we", or "our").
                     </p>
                     
                     <p className="mb-6">

@@ -25,7 +25,7 @@ export default function WhyChooseUs() {
                     <ScrollReveal delay={100}>
                         <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
                             <p>
-                                At ZFUSION LLC MEDICAL SUPPLIES, we believe healthcare should be accessible, reliable, and affordable. We specialize in providing durable medical equipment (DME) that improves quality of life.
+                                At ZFUSION LLC , we believe healthcare should be accessible, reliable, and affordable. We specialize in providing durable medical equipment (DME) that improves quality of life.
                             </p>
                             <p>
                                 With nationwide shipping and exceptional service, we ensure every customer receives the care and equipment they need without hassle.

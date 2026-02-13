@@ -8,7 +8,7 @@ export default function Footer() {
         
         {/* Brand */}
         <div className="mb-8">
-            <h2 className="text-2xl font-bold tracking-wider">ZFUSION LLC MEDICAL SUPPLIES</h2>
+            <h2 className="text-2xl font-bold tracking-wider">ZFUSION LLC </h2>
             <p className="text-xs text-blue-400 tracking-[0.2em] mt-1">WHERE COMFORT MEETS CARE</p>
         </div>
 
@@ -62,13 +62,13 @@ export default function Footer() {
             
             {/* Left Side: Copyright & Email */}
             <div className="flex flex-col items-center md:items-start gap-2">
-                <span>© 2025 ZFusion LLC Medical. All rights reserved.</span>
+                <span>© 2025 ZFusion LLC . All rights reserved.</span>
                 <span className="hover:text-blue-400 transition-colors cursor-pointer">support@zfusion.com</span>
             </div>
 
             {/* Right Side: Registered Address */}
             <div className="flex flex-col items-center md:items-end gap-1 text-center md:text-right">
-                <span className="font-semibold text-slate-400">Altamash Mohammad Ismail S SOLE MBR</span>
+                {/* <span className="font-semibold text-slate-400">Altamash Mohammad Ismail S SOLE MBR</span> */}
                 <span>30 N GOULD ST 39479</span>
                 <span>SHERIDAN WY 82801</span>
             </div>

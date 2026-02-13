@@ -46,7 +46,7 @@ export default function Hero() {
         
         <ScrollReveal delay={200}>
             <p className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto leading-relaxed font-light">
-                Experience healthcare excellence with ZFUSION LLC MEDICAL. We provide top-quality durable medical equipment and essential supplies—delivered straight to your doorstep with care.
+                Experience healthcare excellence with ZFUSION LLC . We provide top-quality durable medical equipment and essential supplies—delivered straight to your doorstep with care.
             </p>
         </ScrollReveal>
         

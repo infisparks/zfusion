@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
                 {/* Introduction */}
                 <div>
                     <h2 className="text-2xl font-bold text-slate-900 mb-4">Introduction</h2>
-                    <p>Welcome to the Privacy Policy of ZFUSION LLC MEDICAL ("we", "us", or "our"). This policy is designed to help you understand how we collect, use, disclose, and safeguard your personal information when you visit our website, use our services, or interact with our platform.</p>
+                    <p>Welcome to the Privacy Policy of ZFUSION LLC ("we", "us", or "our"). This policy is designed to help you understand how we collect, use, disclose, and safeguard your personal information when you visit our website, use our services, or interact with our platform.</p>
                 </div>
 
                 {/* Information We Collect */}

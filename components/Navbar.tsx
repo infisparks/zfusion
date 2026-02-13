@@ -59,7 +59,7 @@ export default function Navbar() {
             {/* Logo height controlled, navbar height fixed */}
           <img
             src="/logo.png"
-            alt="ZFusion LLC Medical Supplies"
+            alt="ZFusion LLC "
             className="h-42 w-auto object-contain"
           />
         </Link>

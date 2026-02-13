@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "ZFusion LLC | Trusted Medical Supplies",
+  title: "ZFusion LLC ",
   description: "Your trusted partner for durable medical equipment and healthcare supplies. We offer nationwide delivery on wheelchairs, respiratory care, orthopedics, and more. Fast, reliable, and patient-focused.",
   icons: {
     icon: "/faviconlogo.png", 
