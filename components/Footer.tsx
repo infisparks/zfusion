@@ -58,11 +58,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="w-full pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-            <span>© 2025 ZFusion LLC Medical. All rights reserved.</span>
-            <div className="flex gap-6">
-                <span>support@zfusion.com</span>
-                <span>555 REPUBLIC DR STE 320 PLANO TX 75074</span>
+        <div className="w-full pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center md:items-end text-xs text-slate-500 gap-6 md:gap-4">
+            
+            {/* Left Side: Copyright & Email */}
+            <div className="flex flex-col items-center md:items-start gap-2">
+                <span>© 2025 ZFusion LLC Medical. All rights reserved.</span>
+                <span className="hover:text-blue-400 transition-colors cursor-pointer">support@zfusion.com</span>
+            </div>
+
+            {/* Right Side: Registered Address */}
+            <div className="flex flex-col items-center md:items-end gap-1 text-center md:text-right">
+                <span className="font-semibold text-slate-400">Altamash Mohammad Ismail S SOLE MBR</span>
+                <span>30 N GOULD ST 39479</span>
+                <span>SHERIDAN WY 82801</span>
             </div>
         </div>
       </div>
