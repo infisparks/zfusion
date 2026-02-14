@@ -10,12 +10,12 @@ export default function TermsOfService() {
       
       {/* 1️⃣ HERO SECTION: Matches Contact & Privacy pages */}
       <section className="relative pt-32 pb-20 px-4 text-center overflow-hidden bg-slate-900">
-        {/* Deep Blue Gradient Background */}
-        <div className="absolute inset-0 bg-linear-to-br from-blue-900 via-slate-900 to-slate-950 z-0"></div>
+        {/* Deep Green Gradient Background */}
+        <div className="absolute inset-0 bg-linear-to-br from-emerald-900 via-slate-900 to-slate-950 z-0"></div>
         
         {/* Animated/Blurry Background Shapes */}
-        <div className="absolute top-0 right-0 w-125 h-125 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-75 h-75 bg-cyan-500/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+        <div className="absolute top-0 right-0 w-125 h-125 bg-emerald-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-75 h-75 bg-teal-500/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto space-y-4">
             <ScrollReveal>
@@ -24,7 +24,7 @@ export default function TermsOfService() {
                 </h1>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-                <p className="text-blue-200 text-lg font-medium tracking-wide">
+                <p className="text-emerald-200 text-lg font-medium tracking-wide">
                     Last Updated: 2025-09-16
                 </p>
             </ScrollReveal>
@@ -48,7 +48,7 @@ export default function TermsOfService() {
                         Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.
                     </p>
                     
-                    <p className="p-4 bg-slate-50 border-l-4 border-blue-500 rounded-r-lg text-slate-600 italic">
+                    <p className="p-4 bg-slate-50 border-l-4 border-emerald-500 rounded-r-lg text-slate-600 italic">
                         By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
                     </p>
                 </div>

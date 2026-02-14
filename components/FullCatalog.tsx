@@ -44,12 +44,12 @@ export default function FullCatalog() {
                           className={`px-4 py-2 rounded-md font-bold inline-flex items-center gap-2 text-xs transition ${
                             inCart
                               ? 'bg-emerald-100 text-emerald-800 hover:bg-emerald-200'
-                              : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                              : 'bg-slate-100 text-slate-700 hover:bg-emerald-100 hover:text-emerald-700'
                           }`}
                         >
                           {inCart ? (
                             <>
-                              <Check size={14} /> Added to Cart
+                              <Check size={14} /> Added
                             </>
                           ) : (
                             <>

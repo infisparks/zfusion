@@ -10,9 +10,9 @@ export default function PrivacyPolicy() {
       
       {/* HERO SECTION */}
       <section className="relative pt-32 pb-20 px-4 text-center overflow-hidden bg-slate-900">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-900 via-slate-900 to-slate-950 z-0"></div>
-        <div className="absolute top-0 right-0 w-125 h-125 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-75 h-75 bg-cyan-500/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-emerald-900 via-slate-900 to-slate-950 z-0"></div>
+        <div className="absolute top-0 right-0 w-125 h-125 bg-emerald-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-75 h-75 bg-teal-500/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto space-y-4">
             <ScrollReveal>
@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
                 </h1>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-                <p className="text-blue-200 text-lg font-medium">
+                <p className="text-emerald-200 text-lg font-medium">
                     Last Updated: 2025-09-16
                 </p>
             </ScrollReveal>
@@ -51,7 +51,7 @@ export default function PrivacyPolicy() {
                         <li>Email Address</li>
                     </ul>
                     
-                    <p><span className="font-bold text-slate-900">Information collected from your device:</span> Our website may use tracking technologies such as cookies, web beacons, pixels, and other similar technologies to automatically collect certain information from your device, including for example your IP address, browser and operating system information, geographic location, referring website address, and other information about how you interact with the website. Our website may also use cookies to personalize your experience and enable certain features such as keeping track of items you put in your shopping cart. You may disable cookies in your web browser however parts of our website may not function properly. More information about blocking and deleting cookies is available at <a href="http://www.allaboutcookies.org" className="text-blue-600 hover:underline">http://www.allaboutcookies.org</a>. Our email campaigns may also use tracking technologies such as web beacons, pixels and other similar technologies to automatically collect certain information such as your IP address, browser type and version, and email engagement statistics.</p>
+                    <p><span className="font-bold text-slate-900">Information collected from your device:</span> Our website may use tracking technologies such as cookies, web beacons, pixels, and other similar technologies to automatically collect certain information from your device, including for example your IP address, browser and operating system information, geographic location, referring website address, and other information about how you interact with the website. Our website may also use cookies to personalize your experience and enable certain features such as keeping track of items you put in your shopping cart. You may disable cookies in your web browser however parts of our website may not function properly. More information about blocking and deleting cookies is available at <a href="http://www.allaboutcookies.org" className="text-emerald-600 hover:underline">http://www.allaboutcookies.org</a>. Our email campaigns may also use tracking technologies such as web beacons, pixels and other similar technologies to automatically collect certain information such as your IP address, browser type and version, and email engagement statistics.</p>
                 </div>
 
                 {/* How We Use Your Information */}
@@ -112,7 +112,7 @@ export default function PrivacyPolicy() {
                 {/* Contact Us */}
                 <div>
                     <h2 className="text-2xl font-bold text-slate-900 mb-4">Contact Us</h2>
-                    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please feel free to contact us at <a href="mailto:support@zfusion.com" className="text-blue-600 font-bold hover:underline">support@zfusion.com</a></p>
+                    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please feel free to contact us at <a href="mailto:support@zfusion.com" className="text-emerald-600 font-bold hover:underline">support@zfusion.com</a></p>
                 </div>
             </div>
         </ScrollReveal>

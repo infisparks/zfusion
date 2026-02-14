@@ -50,49 +50,49 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        scrolled ? 'glass-nav h-23 shadow-lg' : 'bg-transparent h-20'
+        scrolled ? 'glass-nav h-24 shadow-lg' : 'bg-transparent h-24'
       }`}
     >
       <div className="container mx-auto px-6 h-full flex items-center justify-between">
         {/* LOGO SECTION */}
         <Link href="/" className="flex items-center cursor-pointer">
-            {/* Logo height controlled, navbar height fixed */}
           <img
             src="/logo.png"
-            alt="ZFusion LLC "
-            className="h-42 w-auto object-contain"
+            alt="ZFusion LLC"
+            className="h-42 w-auto object-contain "
           />
         </Link>
 
         {/* CENTER LINKS - DESKTOP */}
         <div className="hidden lg:flex items-center gap-8 text-base font-medium text-white/90">
           {navItems.map((item) => (
-                <Link 
-                    key={item} 
+            <Link 
+              key={item} 
               href={getHref(item)}
-                    className="relative py-1 hover:text-white transition-colors group"
-                >
-                    {item}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-            ))}
+              className="relative py-1 hover:text-white transition-colors group"
+            >
+              {item}
+              {/* Green Underline for Theme Consistency */}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          ))}
         </div>
 
         {/* RIGHT ACTIONS */}
         <div className="flex items-center gap-4">
           {/* Phone Number - desktop only */}
-            <div className="hidden xl:flex items-center gap-2 text-white font-medium">
-                <Phone size={18} className="text-white" /> 
+          <div className="hidden xl:flex items-center gap-2 text-white font-medium">
+            <Phone size={18} className="text-emerald-400" /> 
             <span className="tracking-wide">239-342-7733</span>
-            </div>
+          </div>
 
           {/* Cart Button - desktop */}
           <button
             className="hidden md:inline-flex bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold py-2.5 px-6 rounded-md items-center gap-2 transition-transform transform hover:scale-105 shadow-lg shadow-yellow-400/20"
             onClick={() => (isCartOpen ? closeCart() : openCart())}
           >
-                <ShoppingCart size={20} /> 
-                <span>Cart</span>
+            <ShoppingCart size={20} /> 
+            <span>Cart</span>
             {items.length > 0 && (
               <span className="ml-2 inline-flex items-center justify-center rounded-full bg-slate-900 text-yellow-400 text-xs min-w-6 h-6 px-1">
                 {items.reduce((sum, item) => sum + item.quantity, 0)}
@@ -112,11 +112,11 @@ export default function Navbar() {
                 {items.reduce((sum, item) => sum + item.quantity, 0)}
               </span>
             )}
-            </button>
+          </button>
 
-            {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white"
+            className="lg:hidden text-white hover:text-emerald-400 transition-colors"
             onClick={() => setIsMenuOpen((prev) => !prev)}
             aria-label="Toggle navigation menu"
           >
@@ -138,10 +138,10 @@ export default function Navbar() {
                 key={item}
                 href={getHref(item)}
                 onClick={handleNavClick}
-                className="py-2 border-b border-white/10 last:border-b-0 flex justify-between items-center"
+                className="py-2 border-b border-white/10 last:border-b-0 flex justify-between items-center hover:text-emerald-400 transition-colors"
               >
                 <span>{item}</span>
-                <span className="w-2 h-2 rounded-full bg-yellow-400" />
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
               </Link>
             ))}
           </div>
@@ -155,7 +155,7 @@ export default function Navbar() {
             className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
             onClick={closeCart}
           />
-          <div className="fixed inset-y-0 right-0 w-full sm:w-110 sm:inset-y-4 sm:right-4 z-50 flex flex-col rounded-2xl glass-panel shadow-[0_18px_45px_rgba(15,23,42,0.28)]">
+          <div className="fixed inset-y-0 right-0 w-full sm:w-110 sm:inset-y-4 sm:right-4 z-50 flex flex-col rounded-2xl glass-panel shadow-[0_18px_45px_rgba(6,78,59,0.28)]">
             {/* HEADER */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-slate-200/70">
               <div>
@@ -186,7 +186,7 @@ export default function Navbar() {
                   {items.map((item) => (
                     <div
                       key={item.id}
-                      className="flex gap-3 rounded-2xl bg-white/90 border border-slate-200/70 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-200 p-3"
+                      className="flex gap-3 rounded-2xl bg-white/90 border border-slate-200/70 shadow-sm hover:shadow-lg hover:border-emerald-200 transition-all duration-200 p-3"
                     >
                       <div className="w-16 h-16 rounded-xl bg-slate-100 overflow-hidden flex items-center justify-center shadow-inner">
                         <img
@@ -248,7 +248,8 @@ export default function Navbar() {
                 </div>
               )}
 
-                <div className="mt-6 space-y-4 border-t border-slate-200 pt-4 bg-white/90 rounded-2xl px-4 pb-5 shadow-md">
+              {/* Quote Form Container - Updated Colors */}
+              <div className="mt-6 space-y-4 border-t border-slate-200 pt-4 bg-white/90 rounded-2xl px-4 pb-5 shadow-md">
                 <h3 className="text-sm font-semibold text-slate-900">
                   Request a Price Quote
                 </h3>
@@ -309,9 +310,9 @@ export default function Navbar() {
                       required
                       value={quoteName}
                       onChange={(e) => setQuoteName(e.target.value)}
-                      className="peer w-full rounded-lg border border-slate-200 bg-white/80 pl-14 pr-3 pt-4 pb-2 text-sm outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10"
+                      className="peer w-full rounded-lg border border-slate-200 bg-white/80 pl-14 pr-3 pt-4 pb-2 text-sm outline-none transition-all focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10"
                     />
-                    <label className="pointer-events-none absolute left-14 top-2 text-[11px] font-medium uppercase tracking-[0.12em] text-slate-400 transition-all peer-focus:text-blue-600">
+                    <label className="pointer-events-none absolute left-14 top-2 text-[11px] font-medium uppercase tracking-[0.12em] text-slate-400 transition-all peer-focus:text-emerald-600">
                       Full Name
                     </label>
                   </div>
@@ -328,9 +329,9 @@ export default function Navbar() {
                       required
                       value={quoteEmail}
                       onChange={(e) => setQuoteEmail(e.target.value)}
-                      className="peer w-full rounded-lg border border-slate-200 bg-white/80 pl-14 pr-3 pt-4 pb-2 text-sm outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10"
+                      className="peer w-full rounded-lg border border-slate-200 bg-white/80 pl-14 pr-3 pt-4 pb-2 text-sm outline-none transition-all focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10"
                     />
-                    <label className="pointer-events-none absolute left-14 top-2 text-[11px] font-medium uppercase tracking-[0.12em] text-slate-400 transition-all peer-focus:text-blue-600">
+                    <label className="pointer-events-none absolute left-14 top-2 text-[11px] font-medium uppercase tracking-[0.12em] text-slate-400 transition-all peer-focus:text-emerald-600">
                       Email Address
                     </label>
                   </div>
@@ -347,9 +348,9 @@ export default function Navbar() {
                       required
                       value={quotePhone}
                       onChange={(e) => setQuotePhone(e.target.value)}
-                      className="peer w-full rounded-lg border border-slate-200 bg-white/80 pl-14 pr-3 pt-4 pb-2 text-sm outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10"
+                      className="peer w-full rounded-lg border border-slate-200 bg-white/80 pl-14 pr-3 pt-4 pb-2 text-sm outline-none transition-all focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10"
                     />
-                    <label className="pointer-events-none absolute left-14 top-2 text-[11px] font-medium uppercase tracking-[0.12em] text-slate-400 transition-all peer-focus:text-blue-600">
+                    <label className="pointer-events-none absolute left-14 top-2 text-[11px] font-medium uppercase tracking-[0.12em] text-slate-400 transition-all peer-focus:text-emerald-600">
                       Phone Number 
                     </label>
                   </div>
@@ -370,7 +371,7 @@ export default function Navbar() {
                   <button
                     type="submit"
                     disabled={isSubmittingQuote || items.length === 0}
-                    className="mt-2 w-full bg-linear-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 disabled:opacity-70 disabled:cursor-not-allowed text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center gap-2 shadow-[0_12px_30px_rgba(37,99,235,0.55)] hover:scale-[1.01] transition-transform"
+                    className="mt-2 w-full bg-linear-to-r from-emerald-600 to-emerald-800 hover:from-emerald-500 hover:to-emerald-700 disabled:opacity-70 disabled:cursor-not-allowed text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center gap-2 shadow-[0_12px_30px_rgba(5,150,105,0.4)] hover:scale-[1.01] transition-transform"
                   >
                     {isSubmittingQuote && (
                       <span className="h-4 w-4 rounded-full border-2 border-white/60 border-t-transparent animate-spin" />
@@ -388,16 +389,16 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setShowCallInfo((prev) => !prev)}
-                    className="relative w-full inline-flex items-center justify-center gap-2 rounded-lg border border-blue-200 bg-blue-50 text-blue-700 text-sm font-semibold py-3 hover:bg-blue-100 transition-colors"
+                    className="relative w-full inline-flex items-center justify-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 text-emerald-700 text-sm font-semibold py-3 hover:bg-emerald-100 transition-colors"
                   >
                     <Phone size={16} />
                     Call Us: 239-342-7733
 
                     {showCallInfo && (
-                      <div className="absolute left-1/2 bottom-full mb-3 -translate-x-1/2 w-full rounded-2xl bg-white/95 border border-slate-200/80 shadow-[0_18px_40px_rgba(15,23,42,0.35)] text-left p-4 text-sm z-30">
+                      <div className="absolute left-1/2 bottom-full mb-3 -translate-x-1/2 w-full rounded-2xl bg-white/95 border border-slate-200/80 shadow-[0_18px_40px_rgba(6,78,59,0.35)] text-left p-4 text-sm z-30">
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex items-start gap-3">
-                            <div className="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-blue-600 shadow-sm">
+                            <div className="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 shadow-sm">
                               <Phone size={16} />
                             </div>
                             <div>
@@ -408,7 +409,7 @@ export default function Navbar() {
                                 Please call our team at{' '}
                                 <a
                                   href="tel:2393427733"
-                                  className="font-semibold text-blue-600 hover:underline"
+                                  className="font-semibold text-emerald-600 hover:underline"
                                 >
                                   239-342-7733
                                 </a>{' '}
@@ -426,9 +427,9 @@ export default function Navbar() {
                             aria-label="Close call info"
                           >
                             <X size={14} />
-            </button>
-        </div>
-      </div>
+                          </button>
+                        </div>
+                      </div>
                     )}
                   </button>
 
