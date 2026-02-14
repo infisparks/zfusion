@@ -8,7 +8,7 @@ export default function Footer() {
         
         {/* Brand */}
         <div className="mb-8">
-            <h2 className="text-2xl font-bold tracking-wider">ZFUSION LLC </h2>
+            <h2 className="text-2xl font-bold tracking-wider">ZFusion Medical Supplies is a registered DBA of ZFusion LLC </h2>
             <p className="text-xs text-blue-400 tracking-[0.2em] mt-1">WHERE COMFORT MEETS CARE</p>
         </div>
 

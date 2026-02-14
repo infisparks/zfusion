@@ -5,15 +5,13 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react';
 import { useState } from 'react';
 import { db } from '@/lib/firebase';
-
 import { ref, push, serverTimestamp } from 'firebase/database';
 
 export default function ContactPage() {
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const [city, setCity] = useState('');
-  const [state, setState] = useState('');
+  // Removed City and State states
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -31,8 +29,7 @@ export default function ContactPage() {
         fullName,
         phone,
         email,
-        city,
-        state,
+        // Removed City and State from database submission
         message,
         createdAt: serverTimestamp(),
         createdAtString: new Date().toLocaleString(),
@@ -42,8 +39,7 @@ export default function ContactPage() {
       setFullName('');
       setPhone('');
       setEmail('');
-      setCity('');
-      setState('');
+      // Removed City and State reset
       setMessage('');
     } catch (err) {
       console.error('Error saving contact message:', err);
@@ -57,7 +53,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-slate-50 font-sans">
       <Navbar />
       
-      {/* 1️⃣ HEADER: Professional Gradient instead of plain black */}
+      {/* 1️⃣ HEADER */}
       <section className="relative pt-32 pb-20 px-4 text-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 bg-linear-to-br from-blue-900 via-slate-900 to-slate-950 z-0"></div>
         {/* Abstract Background Elements */}
@@ -105,13 +101,13 @@ export default function ContactPage() {
                                     />
                                 </div>
                                 <div className="space-y-2 group">
-                                    <label className="text-sm font-semibold text-slate-700 ml-1 group-focus-within:text-blue-600 transition-colors">Phone Number</label>
+                                    <label className="text-sm font-semibold text-slate-700 ml-1 group-focus-within:text-blue-600 transition-colors">Phone Number <span className="text-slate-400 font-normal text-xs">(Optional)</span></label>
                                     <input 
                                         type="text" 
                                         placeholder="(555) 123-4567"
                                         value={phone}
                                         onChange={(e) => setPhone(e.target.value)}
-                                        required
+                                        // Removed 'required' attribute here
                                         className="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm outline-none focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all duration-300 placeholder:text-slate-400" 
                                     />
                                 </div>
@@ -129,28 +125,7 @@ export default function ContactPage() {
                                 />
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="space-y-2 group">
-                                    <label className="text-sm font-semibold text-slate-700 ml-1 group-focus-within:text-blue-600 transition-colors">City</label>
-                                    <input 
-                                        type="text" 
-                                        placeholder="Plano"
-                                        value={city}
-                                        onChange={(e) => setCity(e.target.value)}
-                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm outline-none focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all duration-300 placeholder:text-slate-400" 
-                                    />
-                                </div>
-                                <div className="space-y-2 group">
-                                    <label className="text-sm font-semibold text-slate-700 ml-1 group-focus-within:text-blue-600 transition-colors">State</label>
-                                    <input 
-                                        type="text" 
-                                        placeholder="TX"
-                                        value={state}
-                                        onChange={(e) => setState(e.target.value)}
-                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm outline-none focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all duration-300 placeholder:text-slate-400" 
-                                    />
-                                </div>
-                            </div>
+                            {/* REMOVED CITY AND STATE INPUTS HERE */}
 
                             <div className="space-y-2 group">
                                 <label className="text-sm font-semibold text-slate-700 ml-1 group-focus-within:text-blue-600 transition-colors">Your Message</label>
@@ -188,7 +163,7 @@ export default function ContactPage() {
                               disabled={isSubmitting}
                               className="group w-full md:w-auto bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-blue-600/30 hover:shadow-blue-600/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
                             >
-                              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                              <span>{isSubmitting ? 'Submitting...' : 'Submit'}</span>
                               <Send
                                 size={18}
                                 className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
@@ -216,7 +191,6 @@ export default function ContactPage() {
                                     {
                                       icon: MapPin,
                                       title: "Our Location",
-                                    //   val: "Altamash Mohammad Ismail S, Sole MBR",
                                       val: "30 N Gould St 39479, Sheridan, WY 82801",
                                         sub: "Visit us or send mail"
                                     },
