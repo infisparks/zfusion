@@ -122,13 +122,12 @@ export default function ContactPage() {
                             </div>
 
                             <div className="space-y-2 group">
-                                <label className="text-sm font-semibold text-slate-700 ml-1 group-focus-within:text-emerald-600 transition-colors">Your Message</label>
+                                <label className="text-sm font-semibold text-slate-700 ml-1 group-focus-within:text-emerald-600 transition-colors">Your Message <span className="text-slate-400 font-normal text-xs">(Optional)</span></label>
                                 <textarea 
                                     placeholder="Tell us how we can help..." 
                                     rows={4}
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
-                                    required
                                     className="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm outline-none focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 transition-all duration-300 placeholder:text-slate-400 resize-none"
                                 ></textarea>
                             </div>
@@ -138,7 +137,7 @@ export default function ContactPage() {
                                     <input type="checkbox" className="w-4 h-4 text-emerald-600 rounded border-gray-300 focus:ring-emerald-500" />
                                 </div>
                                 <p className="text-xs text-slate-500 leading-relaxed">
-                                    Stay connected! By submitting this form, you agree to receive marketing text messages from ZFUSION LLC. Consent is not required for purchase. Reply STOP to opt out. Read our <a href="/privacy-policy" className="text-emerald-600 font-bold hover:underline">Privacy Policy</a> and <a href="/terms" className="text-emerald-600 font-bold hover:underline">Terms</a>.
+                                    Stay connected! By submitting this form, you agree to receive marketing text messages (such as promotions and cart reminders) from ZFUSION LLC at the number provided. Consent is not required for purchase. Message and data rates may apply, and frequency may vary. You can opt out anytime by replying STOP. For assistance, reply HELP. Read our <a href="/privacy-policy" className="text-emerald-600 font-bold hover:underline">Privacy Policy</a> and <a href="/terms" className="text-emerald-600 font-bold hover:underline">Terms</a> for more details.
                                 </p>
                             </div>
 
