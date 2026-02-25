@@ -63,7 +63,7 @@ export default function Footer() {
             {/* Left Side: Copyright & Email */}
             <div className="flex flex-col items-center md:items-start gap-2">
                 <span>© 2025 ZFusion LLC. All rights reserved.</span>
-                <span className="hover:text-emerald-400 transition-colors cursor-pointer">support@zfusion.com</span>
+                <span className="hover:text-emerald-400 transition-colors cursor-pointer">support@zfusionllc.com</span>
             </div>
 
             {/* Right Side: Registered Address */}

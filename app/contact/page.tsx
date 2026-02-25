@@ -173,7 +173,7 @@ export default function ContactPage() {
                             <div className="space-y-8">
                                 {[
                                     { icon: Phone, title: "Phone Number", val: "239-342-7733", sub: "Mon-Fri 8am-6pm" },
-                                    { icon: Mail, title: "Email Address", val: "support@zfusion.com", sub: "Online support 24/7" },
+                                    { icon: Mail, title: "Email Address", val: "support@zfusionllc.com", sub: "Online support 24/7" },
                                     { icon: MapPin, title: "Our Location", val: "30 N Gould St 39479, Sheridan, WY 82801", sub: "Visit us or send mail" },
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-5 group">
